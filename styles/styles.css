@@ -1,13 +1,15 @@
 :root {
-  --body-text-color: #212121;
-  --image-text-color: #757575;
-  --background-botton-color: #2196f3;
-  --white-color: #ffffff;
-  --footer-background-color: #2f303a;
+  --body-text-color: rgb(33, 33, 33);
+  --image-text-color: rgb(117, 117, 117);
+  --background-botton-color: rgb(33, 150, 243);
+  --white-color: rgb(255, 255, 255);
+  --footer-background-color: rgb(47, 48, 58);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --icon-clients: rgba(175, 177, 184, 1);
-  --back-svg-color: #f5f4fa;
+  --back-svg-color: rgb(245, 244, 250);
   --text-on-image: rgba(47, 48, 58, 0.8);
+  --time-for-hover: 250ms;
+  --timing-fuktion: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -16,7 +18,7 @@ body {
   color: var(--body-text-color);
 }
 
-/* ---------------------------------------------Загальні----- */
+/* ----------------------------------------Загальні----- */
 li {
   list-style-type: none;
 }
@@ -132,7 +134,8 @@ div.container-header {
 .menu-color:focus {
   color: var(--background-botton-color);
   background-color: var(--white-color);
-  transition-delay: 250ms;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
 
 .adress-header {
@@ -153,6 +156,8 @@ div.container-header {
 .contacts:focus {
   color: var(--background-botton-color);
   cursor: pointer;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
 
 .header-color-contacts {
@@ -166,16 +171,24 @@ div.container-header {
 .header-color-contacts:focus {
   color: var(--background-botton-color);
   cursor: pointer;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
+
 .header-color-contacts:hover .header-icon-phone,
 .header-color-contacts:focus .header-icon-phone {
   fill: var(--background-botton-color);
   cursor: pointer;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
+
 .header-color-contacts:hover .header-mail,
 .header-color-contacts:focus .header-mail {
   fill: var(--background-botton-color);
   cursor: pointer;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
 
 .heder-contacts {
@@ -219,6 +232,9 @@ div.container-header {
 
 .menu-portfolio:hover,
 .menu-portfolio:focus {
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+
   color: var(--white-color);
   background-color: var(--background-botton-color);
 
@@ -244,6 +260,8 @@ div.container-header {
 .hero.section {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .h1 {
@@ -285,12 +303,51 @@ div.container-header {
 
 .index-bottom:hover,
 .index-bottom:focus {
-  color: var(--body-text-color);
+  color: var(--white-color);
   background-color: var(--background-botton-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 /* -----------MODAL WINDOW */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-/* --------------------------Що ми робимо index + porfolio */
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+
+  top: 40%;
+  width: 528px;
+  height: 581px;
+  background-color: var(--white-color);
+}
+.button-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+}
+
+/* --------------------------what we do  */
 
 .what-we-do {
   display: flex;
@@ -301,8 +358,6 @@ div.container-header {
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 30px;
-
   width: 240px;
   height: 120px;
 
@@ -310,14 +365,14 @@ div.container-header {
   background-color: var(--back-svg-color);
 }
 
-.svg-we-do {
-  width: 70px;
-  height: 70px;
-}
-
 .item {
   width: calc((100%-90px) / 4);
   margin-right: 30px;
+}
+
+.svg-we-do {
+  width: 70px;
+  height: 70px;
 }
 
 .item:nth-child(4n) {
@@ -336,6 +391,8 @@ div.container-header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -344,7 +401,24 @@ div.container-header {
   height: 0;
 }
 
-/* -----------------------------фото робочого процесу */
+.photo-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  height: 70px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  background-color: var(--text-on-image);
+}
+
+/* -------------------------index work proces */
 .section-exemples {
   padding-top: 0;
 }
@@ -372,7 +446,7 @@ div.container-header {
   font-weight: 700;
 }
 
-/* ------------------------------------Наша команда */
+/* ------------------------------------team */
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -441,6 +515,9 @@ div.container-header {
 .person-icon:focus {
   cursor: pointer;
   fill: var(--white-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
 
 .person-list-items {
@@ -457,6 +534,9 @@ div.container-header {
 }
 .person-list-items:hover,
 .person-list-items:focus {
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+
   background-color: var(--background-botton-color);
   fill: var(--white-color);
 }
@@ -481,6 +561,9 @@ div.container-header {
 
 .person-icon-1:hover .person-icon,
 .person-icon-1:focus .person-icon {
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+
   background-color: var(--background-botton-color);
   fill: var(--white-color);
   cursor: pointer;
@@ -522,21 +605,31 @@ div.container-header {
   fill: var(--icon-clients);
 }
 
-.clients-icon:hover,
-.clients-icon:focus {
-  fill: var(--background-botton-color);
-}
-
 .clients-item:not(:first-child) {
   margin-left: 30px;
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-item:hover .clients-link,
+.clients-item:focus .clients-link {
   border: 1px solid var(--background-botton-color);
 }
 
-/* -------------------------------Portfolio main */
+/* -------------------------------Portfolio button */
+.botton-portfolio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.list-botton-portfolio {
+  margin-right: 8px;
+}
+
+.list-botton-portfolio:last-child {
+  margin-right: 0;
+}
+/*--------------------------------- Portfolio our projects */
+/* list our progect */
 .botton-portfolio {
   display: flex;
   justify-content: center;
@@ -551,30 +644,68 @@ div.container-header {
   margin-right: 0;
 }
 /*     ----------------------------------Список наших проектів Portfolio */
-.our-progects {
+.progects {
   display: flex;
   flex-wrap: wrap;
 }
 
-.our-progects-item {
+.progects-item {
+  position: relative;
+
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
-.our-progects-item:nth-child(3n) {
+.progects-item:nth-child(3n) {
   margin-right: 0px;
 }
 
-.our-progects-item:nth-last-child(-n + 3) {
+.progects-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
-.our-progects-item:hover,
-.our-progects-item:focus {
+.progects-link {
+  display: block;
+  width: 370px;
+  height: 404px;
+  color: var(--body-text-color);
+}
+
+.progects-link:hover,
+.progects-link:focus {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.progects-overlay {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  padding: 58px 27px 68px 27px;
+  font-size: 18px;
+  line-height: 28px;
+
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+}
+.progects-link:hover .progects-overlay,
+.progects-link:focus .progects-overlay {
+  overflow: visible;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+}
 .name-progect {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -596,6 +727,8 @@ div.container-header {
   font-size: 18px;
   line-height: 2;
   font-weight: 700;
+
+  color: var(--body-text-color);
 }
 
 .small-text-image {
@@ -618,7 +751,7 @@ div.container-header {
 .person-icon-futer:active {
   fill: var(--white-color);
 }
-/* ---------------------------------------- ФУТЕР */
+/* ---------------------------------------- footer */
 
 .container-footer {
   display: flex;
@@ -668,6 +801,9 @@ div.container-header {
 
 .footer-color:hover,
 .footer-color:focus {
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+
   color: var(--background-botton-color);
 }
 
