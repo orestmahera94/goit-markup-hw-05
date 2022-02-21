@@ -535,17 +535,6 @@ div.container-header {
   margin-top: 16px;
 }
 
-.person-icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--icon-clients);
-  cursor: pointer;
-
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-  transition-property: fill;
-}
-
 .person-list-items {
   display: flex;
   justify-content: center;
@@ -569,13 +558,25 @@ div.container-header {
 
   transition-duration: var(--time-for-hover);
   transition-timing-function: var(--timing-fuktion);
-  transition-property: background-color, fill;
+  transition-property: background-color;
 }
 
 .person-icon-1:hover,
 .person-icon-1:focus {
   background-color: var(--background-botton-color);
 }
+
+.person-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-clients);
+  cursor: pointer;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
+}
+
 .person-icon-1:hover .person-icon,
 .person-icon-1:focus .person-icon {
   fill: var(--white-color);
