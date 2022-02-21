@@ -695,11 +695,11 @@ div.container-header {
   position: absolute;
   left: 0;
   top: 100%;
-
+  z-index: -1;
   padding: 58px 27px 68px 27px;
   font-size: 18px;
   line-height: 28px;
-
+  opacity: 0;
   letter-spacing: 0.03em;
   color: var(--white-color);
 
@@ -708,7 +708,10 @@ div.container-header {
 }
 .progects-link:hover .progects-overlay,
 .progects-link:focus .progects-overlay {
+  z-index: 1;
   overflow: visible;
+  opacity: 1;
+
   left: 0;
   top: 0;
   background-color: rgba(33, 150, 243, 0.9);
@@ -716,6 +719,7 @@ div.container-header {
   transition-duration: var(--time-for-hover);
   transition-timing-function: var(--timing-fuktion);
 }
+
 .name-progect {
   padding-top: 20px;
   padding-bottom: 20px;
