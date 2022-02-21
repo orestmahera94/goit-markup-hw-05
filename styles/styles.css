@@ -701,35 +701,32 @@ div.container-header {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-.progects-overlay {
+.progects-thumb {
   overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  z-index: -1;
-  padding: 58px 27px 68px 27px;
-  font-size: 18px;
-  line-height: 28px;
-  opacity: 0;
-  letter-spacing: 0.03em;
-  color: var(--white-color);
-
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
+  position: relative;
 }
-.progects-link:hover .progects-overlay,
-.progects-link:focus .progects-overlay {
-  z-index: 1;
-  overflow: visible;
-  opacity: 1;
+.progects-overlay {
+  position: absolute;
 
   left: 0;
   top: 0;
-  background-color: rgba(33, 150, 243, 0.9);
 
+  padding: 58px 27px 68px 27px;
+  font-size: 18px;
+  line-height: 28px;
+
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  transform: translateY(101%);
   transition-duration: var(--time-for-hover);
   transition-timing-function: var(--timing-fuktion);
+  transition-property: transform;
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.progects-link:hover .progects-overlay,
+.progects-link:focus .progects-overlay {
+  transform: translateY(0);
 }
 
 .name-progect {
@@ -834,6 +831,8 @@ div.container-header {
 }
 
 .footer-background-color {
+  z-index: 1;
+
   background-color: var(--footer-background-color);
 }
 
