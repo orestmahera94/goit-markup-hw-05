@@ -329,6 +329,8 @@ div.container-header {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
 }
 
 .backdrop.is-hidden {
