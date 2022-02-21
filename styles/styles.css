@@ -382,7 +382,6 @@ div.container-header {
   justify-content: center;
   align-items: center;
 
-  width: 240px;
   height: 120px;
 
   fill: var(--body-text-color);
