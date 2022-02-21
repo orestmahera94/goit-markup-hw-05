@@ -590,6 +590,10 @@ div.container-header {
   height: 92px;
 }
 
+.clients-item:not(:first-child) {
+  margin-left: 30px;
+}
+
 .clients-link {
   display: flex;
   justify-content: center;
@@ -620,10 +624,6 @@ div.container-header {
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--background-botton-color);
-}
-
-.clients-item:not(:first-child) {
-  margin-left: 30px;
 }
 
 .clients-item:hover .clients-link,
