@@ -306,18 +306,20 @@ div.container-header {
   line-height: 1.8;
   background-color: var(--background-botton-color);
   color: var(--white-color);
+  cursor: pointer;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: background-color, color;
 }
 
 .index-bottom:hover,
 .index-bottom:focus {
   color: var(--white-color);
   background-color: var(--background-botton-color);
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 /* -----------MODAL WINDOW */
 .backdrop {
@@ -532,15 +534,16 @@ div.container-header {
   width: 20px;
   height: 20px;
   fill: var(--icon-clients);
+  cursor: pointer;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
 }
 
 .person-icon:hover,
 .person-icon:focus {
-  cursor: pointer;
   fill: var(--white-color);
-
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
 }
 
 .person-list-items {
@@ -550,6 +553,9 @@ div.container-header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: background-color, fill;
 }
 
 .person-list-items:not(:first-child) {
@@ -557,9 +563,6 @@ div.container-header {
 }
 .person-list-items:hover,
 .person-list-items:focus {
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-
   background-color: var(--background-botton-color);
   fill: var(--white-color);
 }
@@ -580,16 +583,16 @@ div.container-header {
 
   width: 100%;
   height: 100%;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: background-color, fill;
 }
 
 .person-icon-1:hover .person-icon,
 .person-icon-1:focus .person-icon {
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-
   background-color: var(--background-botton-color);
   fill: var(--white-color);
-  cursor: pointer;
 }
 /* --------------------------OUR CLIENTS */
 .clients-list {
@@ -613,19 +616,25 @@ div.container-header {
 
   width: 170px;
   height: 92px;
-}
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: var(--background-botton-color);
 
-  box-sizing: border-box;
-  border-radius: 4px;
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
 }
+
 .clients-icon {
   width: 106px;
   height: 60px;
 
   fill: var(--icon-clients);
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: border;
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--background-botton-color);
 }
 
 .clients-item:not(:first-child) {
@@ -770,6 +779,10 @@ div.container-header {
   width: 20px;
   height: 20px;
   fill: var(--white-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
 }
 .person-icon-futer:hover,
 .person-icon-futer:active {
@@ -821,13 +834,14 @@ div.container-header {
 
 .footer-color {
   color: var(--white-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: color;
 }
 
 .footer-color:hover,
 .footer-color:focus {
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-
   color: var(--background-botton-color);
 }
 
