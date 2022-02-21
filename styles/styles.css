@@ -126,6 +126,7 @@ div.container-header {
   height: 4px;
   left: 551px;
   top: 76px;
+
   background-color: var(--background-botton-color);
 }
 .menu li.header + li.header {
@@ -137,9 +138,10 @@ div.container-header {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition-property: color, background-color;
   transition-duration: var(--time-for-hover);
   transition-timing-function: var(--timing-fuktion);
+  transition-property: color, background-color;
+
   color: var(--body-text-color);
 }
 
@@ -160,46 +162,35 @@ div.container-header {
 }
 
 .contacts {
+  cursor: pointer;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: color;
+
   color: var(--footer-contacts-color);
 }
 
 .contacts:hover,
 .contacts:focus {
   color: var(--background-botton-color);
-  cursor: pointer;
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
 }
 
 .header-color-contacts {
   display: flex;
+  cursor: pointer;
 
   align-items: center;
   color: #757575;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: color;
 }
 
 .header-color-contacts:hover,
 .header-color-contacts:focus {
   color: var(--background-botton-color);
-  cursor: pointer;
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-}
-
-.header-color-contacts:hover .header-icon-phone,
-.header-color-contacts:focus .header-icon-phone {
-  fill: var(--background-botton-color);
-  cursor: pointer;
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-}
-
-.header-color-contacts:hover .header-mail,
-.header-color-contacts:focus .header-mail {
-  fill: var(--background-botton-color);
-  cursor: pointer;
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
 }
 
 .heder-contacts {
@@ -211,13 +202,35 @@ div.container-header {
 .header-mail {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
+
   fill: var(--image-text-color);
+}
+
+.header-color-contacts:hover .header-mail,
+.header-color-contacts:focus .header-mail {
+  fill: var(--background-botton-color);
 }
 
 .header-icon-phone {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
+
   fill: var(--image-text-color);
+}
+
+.header-color-contacts:hover .header-icon-phone,
+.header-color-contacts:focus .header-icon-phone {
+  fill: var(--background-botton-color);
 }
 
 .header-nomber {
@@ -238,14 +251,15 @@ div.container-header {
   line-height: 1.6;
   font-family: Roboto;
   font-weight: 500;
-  background-color: #f5f4fa;
+
+  background-color: rgb(245, 244, 250);
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: color, background-color, box-shadow;
 }
 
 .menu-portfolio:hover,
 .menu-portfolio:focus {
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-
   color: var(--white-color);
   background-color: var(--background-botton-color);
 
@@ -527,23 +541,6 @@ div.container-header {
   line-height: 1.18;
 }
 
-.person-icon-list {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-  margin-top: 16px;
-}
-
-.person-list-items {
-  display: flex;
-  justify-content: center;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-}
-
 .person-list-items:not(:first-child) {
   margin-left: 10px;
 }
@@ -582,16 +579,6 @@ div.container-header {
   fill: var(--white-color);
 }
 
-.person-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
 /* --------------------------OUR CLIENTS */
 .clients-list {
   display: flex;
@@ -696,14 +683,20 @@ div.container-header {
 }
 .progects-link {
   display: block;
+
   width: 370px;
   height: 404px;
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: background-color, box-shadow;
+
   color: var(--body-text-color);
 }
 
 .progects-link:hover,
 .progects-link:focus {
-  background: #ffffff;
+  background-color: #ffffff;
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -772,19 +765,7 @@ div.container-header {
   color: var(--white-color);
   background-color: var(--background-botton-color);
 }
-.person-icon-futer {
-  width: 20px;
-  height: 20px;
-  fill: var(--white-color);
 
-  transition-duration: var(--time-for-hover);
-  transition-timing-function: var(--timing-fuktion);
-  transition-property: fill;
-}
-.person-icon-futer:hover,
-.person-icon-futer:active {
-  fill: var(--white-color);
-}
 /* ---------------------------------------- footer */
 
 .container-footer {
@@ -827,6 +808,51 @@ div.container-header {
   text-transform: uppercase;
 
   color: var(--white-color);
+}
+
+.person-icon-list {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.person-list-items {
+  display: flex;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.person-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: background-color;
+}
+.person-link:hover,
+.person-link:active {
+  background-color: var(--background-botton-color);
+}
+
+.person-icon-futer {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-color);
+
+  transition-duration: var(--time-for-hover);
+  transition-timing-function: var(--timing-fuktion);
+  transition-property: fill;
 }
 
 .footer-color {
